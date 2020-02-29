@@ -3,10 +3,10 @@
 en=$(xinput list-props 'Elan Touchpad' | grep 'Device Enabled' | cut -d: -f2)
 if [ $en -eq 1 ];
 then
-	notify-send "Touchpad off" &
+  notify-send "Touchpad off" &
         xinput disable 'Elan Touchpad'
 else
-	notify-send "Touchpad on" &
+  notify-send "Touchpad on" &
         xinput enable 'Elan Touchpad'
 fi
 
