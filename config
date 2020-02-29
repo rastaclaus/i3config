@@ -33,7 +33,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -168,14 +168,15 @@ bar {
 }
 # autostart section
 # exec --no-startup-id compton -b -f --vsync drm
-exec --no-startup-id compton -b -f --vsync opengl
+exec --no-startup-id compton -b -f --vsync
 exec --no-startup-id volumeicon
 exec_always --no-startup-id nitrogen --random --set-tiled ~/Wallpapers
-exec --no-startup-id xset r rate 200 40
+exec --no-startup-id xset r rate 160 40
 exec --no-startup-id nm-applet
+exec --no-startup-id blueberry-tray
 exec --no-startup-id /home/artems/.conky/startconky.sh
 exec --no-startup-id redshift-gtk -l 55.755814:37.617635
 # power control section
 bindsym Ctrl+Mod1+l exec /home/artems/.config/i3/i3-pconrtrol lock
 bindsym Ctrl+Mod1+BackSpace exec /home/artems/.config/i3/i3-pconrtrol logout
-bindsym XF86TouchpadToggle exec --no-startup-id /home/artems/.config/i3/toggle_touchpad
+bindsym $mod+t exec --no-startup-id /home/artems/.config/i3/toggle_touchpad

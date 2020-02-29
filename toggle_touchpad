@@ -1,13 +1,13 @@
 #!/bin/bash
-#xinput enable 'SynPS/2 Synaptics TouchPad'
-en=$(xinput list-props 'SynPS/2 Synaptics TouchPad' | grep 'Device Enabled' | cut -d: -f2)
+#xinput enable 'Elan Touchpad'
+en=$(xinput list-props 'Elan Touchpad' | grep 'Device Enabled' | cut -d: -f2)
 if [ $en -eq 1 ];
 then
-	#notify-send "Touchpad off" &
-        xinput disable 'SynPS/2 Synaptics TouchPad'
+	notify-send "Touchpad off" &
+        xinput disable 'Elan Touchpad'
 else
-	#notify-send "Touchpad on" &
-        xinput enable 'SynPS/2 Synaptics TouchPad'
+	notify-send "Touchpad on" &
+        xinput enable 'Elan Touchpad'
 fi
 
 
