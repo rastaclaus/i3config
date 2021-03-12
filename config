@@ -171,7 +171,7 @@ bar {
 exec --no-startup-id compton -b -f --vsync
 exec --no-startup-id volumeicon
 exec_always --no-startup-id nitrogen --random --set-tiled ~/Wallpapers
-exec --no-startup-id xset r rate 160 40
+exec --no-startup-id xset r rate 120 50
 exec --no-startup-id nm-applet
 exec --no-startup-id blueberry-tray
 exec --no-startup-id /home/artems/.conky/startconky.sh
