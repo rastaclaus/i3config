@@ -157,6 +157,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+bindsym $mod+m exec --no-startup-id birdtray -t
+bindsym $mod+n exec --no-startup-id nmcli connection  up BELL
+bindsym $mod+t exec --no-startup-id /home/artems/.config/i3/toggle_touchpad
 
 # screen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
@@ -182,4 +185,3 @@ exec --no-startup-id redshift-gtk -l 55.755814:37.617635
 # power control section
 bindsym Ctrl+Mod1+l exec /home/artems/.config/i3/i3-pconrtrol lock
 bindsym Ctrl+Mod1+BackSpace exec /home/artems/.config/i3/i3-pconrtrol logout
-bindsym $mod+t exec --no-startup-id /home/artems/.config/i3/toggle_touchpad
