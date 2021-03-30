@@ -1,13 +1,14 @@
 #!/bin/bash
 #xinput enable 'Elan Touchpad'
-en=$(xinput list-props 11 | grep 'Device Enabled' | cut -d: -f2)
+
+en=$(xinput list-props "MSFT0004:00 06CB:CD98 Touchpad" | grep 'Device Enabled' | cut -d: -f2)
 if [ $en -eq 1 ];
 then
   notify-send "Touchpad off" &
-        xinput disable 11
+        xinput disable "MSFT0004:00 06CB:CD98 Touchpad"
 else
   notify-send "Touchpad on" &
-        xinput enable 11
+        xinput enable "MSFT0004:00 06CB:CD98 Touchpad"
 fi
 
 

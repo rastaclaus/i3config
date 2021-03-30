@@ -158,7 +158,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 bindsym $mod+m exec --no-startup-id birdtray -t
-bindsym $mod+n exec --no-startup-id nmcli connection  up BELL
+bindsym $mod+n exec --no-startup-id nmcli connection up BELL
+bindsym $mod+Shift+n exec --no-startup-id nmcli connection down BELL
 bindsym $mod+t exec --no-startup-id /home/artems/.config/i3/toggle_touchpad
 
 # screen brightness controls
@@ -178,7 +179,7 @@ bar {
 exec --no-startup-id compton -b -f --vsync
 exec --no-startup-id volumeicon
 exec_always --no-startup-id nitrogen --random --set-tiled ~/Wallpapers
-#exec --no-startup-id xset r rate 120 50
+exec --no-startup-id xset r rate 200 50
 exec --no-startup-id nm-applet
 exec --no-startup-id /home/artems/.conky/startconky.sh
 exec --no-startup-id redshift-gtk -l 55.755814:37.617635
