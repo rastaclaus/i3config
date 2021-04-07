@@ -177,11 +177,11 @@ bar {
 # autostart section
 # exec --no-startup-id compton -b -f --vsync drm
 exec --no-startup-id compton -b -f --vsync
+exec --no-startup-id /home/artems/.conky/startconky.sh
 exec --no-startup-id volumeicon
-exec_always --no-startup-id nitrogen --random --set-tiled ~/Wallpapers
 exec --no-startup-id xset r rate 200 50
 exec --no-startup-id nm-applet
-exec --no-startup-id /home/artems/.conky/startconky.sh
+exec_always --no-startup-id nitrogen --random --set-tiled ~/Wallpapers
 exec --no-startup-id redshift-gtk -l 55.755814:37.617635
 # power control section
 bindsym Ctrl+Mod1+l exec /home/artems/.config/i3/i3-pconrtrol lock
