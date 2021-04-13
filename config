@@ -157,7 +157,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bindsym $mod+m exec --no-startup-id birdtray -t
 bindsym $mod+n exec --no-startup-id nmcli connection up BELL
 bindsym $mod+Shift+n exec --no-startup-id nmcli connection down BELL
 bindsym $mod+t exec --no-startup-id /home/artems/.config/i3/toggle_touchpad
